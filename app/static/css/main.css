@@ -1,0 +1,21 @@
+.content-section {
+  width: 350px ;
+  margin: auto;
+}
+.content-bs {
+  padding-top: 50px;
+  width: 800px;
+  margin:auto;
+}
+.navbar-toggler {
+  text-decoration-color: red;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.home-header {
+  text-align:center;
+  margin: 200px;
+  width: 60%;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+{% for business in businesses %}
+<div class="content-bs">
+  <div class="jumbotron">
+    <h2>{{ business.name }}</h2>
+    <h2>{{ business.location }}</h2>
+    <h2>{{ business.business_description }}</h2>
+  </div>
+  <div class="">
+     <a class="btn btn-secondary btn-sm m-1" href="{{ url_for('update_business', business_id = business.id) }}">Update</a>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
