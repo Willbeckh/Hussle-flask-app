@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
 {% block head %}
- 
+  {% block title %}
+    {% if title %}
+      <title>Hussle</title>
+    {% else %}
+      <title>Hussle - {{ title }}</title>
+    {% endif %}
+  {% endblock %}
 {% endblock %}
 
 {% block content %}
-  <div class="home-header">
-    <h2>Welcome To Jamii</h2>
-    <h3>here you can register your business and keep the record for it.</h3>
+  <div class="">
+    <div class="home-header">
+      <div stlye="text-align:center">
+        <h2>Welcome To Hussle</h2>
+        <h3>here you can register your business and keep the record for it.</h3>
+        <p>be it a small business or a massive one <br> We got you! </p>
+      </div>
+    </div>
+    <div class="footer">
+      <hr>
+      <p style="text-align:center">made with &#9829; by Billy. &copy2018</p>
+    </div>
   </div>
 {% endblock %}

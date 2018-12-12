@@ -32,7 +32,7 @@ def login():
             flash('Logged in successfully', 'success')
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('home'))
+            return redirect(next_page) if next_page else redirect(url_for('profile'))
         else:
             flash('Login Unsuccessful, Please check your details!', 'danger')
     return render_template('login.html', title='Sign in', form=form)
@@ -40,8 +40,13 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return redirect(url_for('login'))
 
+@app.route('/profile')
+def profile():
+    return render_template('account.html')
+
+# the magic that happens when registering a business happens here
 @app.route('/businesses', methods=['GET', 'POST'])
 @login_required
 def businesses():
@@ -82,13 +87,14 @@ def update_business(business_id):
         return render_template('register_biz.html', title = 'update', form = form)
 
 
+# get business by its ID
 @app.route('/businesses/<int:business_id>')
 @login_required
 def single_business(business_id):
     business = Business.query.get_or_404(business_id)
     return render_template('one_business.html', business = business)
 
-@app.route('/business-delete/<int:business_id>', methods = ['POST', 'GET'])
+@app.route('/delete/<int:business_id>', methods = ['POST', 'GET'])
 @login_required
 def deletebusiness(business_id):
     form = DeleteForm()
