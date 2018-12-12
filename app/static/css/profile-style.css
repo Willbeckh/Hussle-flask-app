@@ -1,0 +1,21 @@
+img {
+  border-radius: 50%;
+  width: 150px;
+  margin: 40px;
+  margin-left: 550px;
+}
+
+.profiler-section {
+  margin: 10px 40px 20px 40px;
+  align-content: center;
+}
+
+.user-data {
+  text-align: center;
+}
+.nav a {
+  background-color: gray;
+  text-decoration-color: white;
+  margin-left: 570px;
+  margin-top: 150px;
+}

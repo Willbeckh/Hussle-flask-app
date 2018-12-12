@@ -1,21 +1,36 @@
+.fixed-top {
+  position: relative;
+}
+
 .content-section {
   width: 350px ;
   margin: auto;
 }
+
 .content-bs {
   padding-top: 50px;
   width: 800px;
   margin:auto;
 }
+
 .navbar-toggler {
   text-decoration-color: red;
 }
-.navbar-dark .navbar-nav .nav-link {
-    color: black;
+
+.container {
+    background-color: gray;
+    overflow: hidden;
 }
 
 .home-header {
   text-align:center;
-  margin: 200px;
-  width: 60%;
+  margin-top: 100px;
+}
+
+.body-container {
+  background-color: #5CDB95;
+}
+
+.footer {
+  margin-top: 200px;
 }
