@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/profile-style.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="profiler-section">
+    <h2 style="text-align:center">Your Profile</h2>
+    <img src="static/images/avatar.png" alt="blank_avatar">
+    <div class="user-data">
+      <p>Username: {{ current_user.username }}</p>
+      <p>Email: {{ current_user.email }}</p>
+      <div class="nav">
+        <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+      </div>
+    </div>
+    <aside class="user-businesses">
+      <!-- <p>Businesses associated with you</p> -->
+    </aside>
+  </div>
+{% endblock %}
